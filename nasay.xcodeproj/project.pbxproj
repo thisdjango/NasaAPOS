@@ -8,24 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		5780F05E262ABC97003715DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5780F05D262ABC97003715DC /* AppDelegate.swift */; };
-		5780F060262ABC97003715DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5780F05F262ABC97003715DC /* SceneDelegate.swift */; };
 		5780F062262ABC97003715DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5780F061262ABC97003715DC /* ViewController.swift */; };
-		5780F065262ABC97003715DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5780F063262ABC97003715DC /* Main.storyboard */; };
 		5780F068262ABC97003715DC /* nasay.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5780F066262ABC97003715DC /* nasay.xcdatamodeld */; };
 		5780F06A262ABC9B003715DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5780F069262ABC9B003715DC /* Assets.xcassets */; };
 		5780F06D262ABC9B003715DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5780F06B262ABC9B003715DC /* LaunchScreen.storyboard */; };
+		5780F078262AC3E1003715DC /* NasaViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5780F077262AC3E1003715DC /* NasaViewCell.swift */; };
+		5780F07B262AC493003715DC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5780F07A262AC493003715DC /* Extensions.swift */; };
+		5780F07E262ACA4D003715DC /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5780F07D262ACA4D003715DC /* ViewModel.swift */; };
+		5780F081262ACDBD003715DC /* NasaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5780F080262ACDBD003715DC /* NasaModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5780F05A262ABC97003715DC /* nasay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nasay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5780F05D262ABC97003715DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5780F05F262ABC97003715DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5780F061262ABC97003715DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5780F064262ABC97003715DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5780F067262ABC97003715DC /* nasay.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = nasay.xcdatamodel; sourceTree = "<group>"; };
 		5780F069262ABC9B003715DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5780F06C262ABC9B003715DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5780F06E262ABC9B003715DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5780F077262AC3E1003715DC /* NasaViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaViewCell.swift; sourceTree = "<group>"; };
+		5780F07A262AC493003715DC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		5780F07D262ACA4D003715DC /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		5780F080262ACDBD003715DC /* NasaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,13 +63,15 @@
 			isa = PBXGroup;
 			children = (
 				5780F05D262ABC97003715DC /* AppDelegate.swift */,
-				5780F05F262ABC97003715DC /* SceneDelegate.swift */,
 				5780F061262ABC97003715DC /* ViewController.swift */,
-				5780F063262ABC97003715DC /* Main.storyboard */,
 				5780F069262ABC9B003715DC /* Assets.xcassets */,
 				5780F06B262ABC9B003715DC /* LaunchScreen.storyboard */,
 				5780F06E262ABC9B003715DC /* Info.plist */,
 				5780F066262ABC97003715DC /* nasay.xcdatamodeld */,
+				5780F077262AC3E1003715DC /* NasaViewCell.swift */,
+				5780F07A262AC493003715DC /* Extensions.swift */,
+				5780F07D262ACA4D003715DC /* ViewModel.swift */,
+				5780F080262ACDBD003715DC /* NasaModel.swift */,
 			);
 			path = nasay;
 			sourceTree = "<group>";
@@ -129,7 +135,6 @@
 			files = (
 				5780F06D262ABC9B003715DC /* LaunchScreen.storyboard in Resources */,
 				5780F06A262ABC9B003715DC /* Assets.xcassets in Resources */,
-				5780F065262ABC97003715DC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,24 +145,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5780F07B262AC493003715DC /* Extensions.swift in Sources */,
 				5780F062262ABC97003715DC /* ViewController.swift in Sources */,
 				5780F05E262ABC97003715DC /* AppDelegate.swift in Sources */,
+				5780F081262ACDBD003715DC /* NasaModel.swift in Sources */,
 				5780F068262ABC97003715DC /* nasay.xcdatamodeld in Sources */,
-				5780F060262ABC97003715DC /* SceneDelegate.swift in Sources */,
+				5780F07E262ACA4D003715DC /* ViewModel.swift in Sources */,
+				5780F078262AC3E1003715DC /* NasaViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5780F063262ABC97003715DC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5780F064262ABC97003715DC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5780F06B262ABC9B003715DC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
